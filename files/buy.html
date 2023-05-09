@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html lang="bg">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title> SAMSUNG </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+<body bgcolor="#D9FCFB">
+
+<style>
+h1 {font-size: 20px;color: #2B7B96;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+table, th, td {
+  border: 4px dotted #2B7B96;
+  border-collapse: collapse;
+}
+
+input[type=text] {
+  width: 63%;
+  padding: 17px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+input[type=email] {
+  width: 63%;
+  padding: 7px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+input[type=submit]
+{
+width:25%;
+background-color:#2B7B96;
+color:white;
+padding:14px 20px;
+margin: 8px 0px;
+border:7;
+border-color:#2B7B96;
+border-radius:4px;
+cursor:pointer;
+font-size:16px;
+}
+input[type=submit]:hover
+{
+background-color: #B6D7A8;
+}
+
+input[type=reset]
+{
+width:25%;
+background-color:#2B7B96;
+color:white;
+padding:14px 20px;
+margin: 8px 0;
+border:7;
+border-color:#2B7B96;
+border-radius:4px;
+cursor:pointer;
+font-size:16px;
+}
+input[type=reset]:hover
+{
+background-color: #F4CCCC;
+}
+
+</style>
+
+<center><h1>Нашият сайт Ви дава възможността да закупите<br>най-новия модел на Samsung - Galaxy S22 Ultra само за 1570лв</h1></center>
+<center><table width="70%" border="0" cellpadding = "10" style="background-color: #92BBC9">
+<tr>
+<td rowspan="3"><center><img src = "../pic/31.jpg" height="280" border="1"></center></td>
+<td> <br>
+<form name="RegForm"  onsubmit="return Buy()" method="post">
+   <div class="form-group">
+       <center><input type="text" class="form-control" value=""  placeholder="First name and surname"  name="Name"></center>
+   </div>
+    <div class="form-group">
+      <center><select class="form-control" value="" name="Colour" style="min-width:63%;" ></center>
+        <option selected>Select colour</option>
+           <option>Bordeaux</option>
+           <option>Mystic black</option>
+           <option>Mystic white</option>
+           <option>Green</option>
+       </select>
+   </div>
+<br>
+
+
+
+
+
+
+
+
+
+</td>
+</tr>
+<tr>
+<td>
+   <div class="form-group">
+       <center><input type="text" class="form-control" value=""  placeholder="Address for shipping"  name="Address"></center>
+   </div>
+   <div class="form-group">
+      <center><input type="email" class="form-control"  value=""  placeholder="Email" name="EMail"></center>
+   </div>
+   <div class="form-group">
+       <center><input type="text" class="form-control"  value="" placeholder="Phone number"  name="Phone"></center>
+   </div>
+
+   <center><p><input type="submit" value="buy" name="Submit">
+       <input type="reset" value="clean" name="Reset">
+   </p></center></form>
+</td>
+</tr>
+</table></center>
+<script>
+function Buy()
+{
+   var name = document.forms["RegForm"]["Name"];
+   var address = document.forms["RegForm"]["Address"];
+   var email = document.forms["RegForm"]["EMail"];
+   var phone = document.forms["RegForm"]["Phone"].value;
+   var colour =  document.forms["RegForm"]["Colour"];
+   if (name.value == "")
+   {
+       window.alert("Please enter  your name.");
+       name.focus();
+       return false;
+   }
+   else if (colour.selectedIndex < 1)
+   {
+       alert("Please choose a colour for the phone.");
+       colour.focus();
+       return false;
+   }
+   else if (address.value == "")
+   {
+       window.alert("Please enter  your address.");
+       address.focus();
+       return false;
+   }
+   else if (email.value == "")
+   {
+       window.alert("Please enter a valid e-mail address.");
+       email.focus();
+       return false;
+   }
+   else if (phone == "")
+   {
+       window.alert("Please enter your  Numeric telephone number.");
+       phone.focus();
+       return false;
+   }
+   else if(!(/^[0-9-+()]*$/.test(phone)))
+   {
+       window.alert("Please only enter valid numeric characters");
+       phone.focus();
+       return false;
+   }
+
+   window.alert("Congratulations, "+ name.value +"!\nYour new phone is on its way!");
+   return true;
+}
+</script>
+<br>
+<hr><font size=3 color= "#2B7B96"><i>Автор: Вилиана Драганова, 77гр, 471221012<br>
+Контакт: vdraganova@tu-sofia.bg<br>
+Повече инф: <a href="https://www.samsung.com/bg/" target="blank">www.samsung.com</a></i></font></hr>
+
+
+
+</body>
+</html>
